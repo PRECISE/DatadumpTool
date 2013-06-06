@@ -32,21 +32,49 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="what-is-the-datadump-tool" class="anchor" href="#what-is-the-datadump-tool"><span class="octicon octicon-link"></span></a>What is the Datadump Tool?</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>This tool was developed to automate and accelerate the processing of data dumps from a MongoDB database.  It focuses on statistical analysis of the graph structure described in the data dumps.  </p>
 
 <h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a name="how-do-i-use-the-tool" class="anchor" href="#how-do-i-use-the-tool"><span class="octicon octicon-link"></span></a>How do I use the tool?</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>First, be sure to install the following third-party libraries, preferably in a <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs.html">Python virtual environment</a>.</p>
+
+<h4>
+<a name="required-third-party-libraries" class="anchor" href="#required-third-party-libraries"><span class="octicon octicon-link"></span></a>Required Third-Party Libraries</h4>
+
+<ul>
+<li>pymongo</li>
+<li>pygraph</li>
+<li>networkx</li>
+<li>numpy</li>
+<li>scipy</li>
+<li>matplotlib</li>
+</ul><p>Once all the required libraries are installed, execute the main script as follows:</p>
+
+<pre><code>$ python datadump_tool.py
+</code></pre>
+
+<p>As the script is running, you will see the following prompt:</p>
+
+<pre><code>(datadump-tool) 
+</code></pre>
+
+<p>You may type 'help' at the prompt to see a list of the available commands:</p>
+
+<pre><code>(datadump-tool) help
+
+Documented commands (type help &lt;topic&gt;):
+========================================
+generate_dump  load_dump  deploy_dump  clear_mongo  stats  print_root_node_data  print_authors 
+find_leaf_nodes  find_root_nodes  calc_graph_scc  show_types  exit
+</code></pre>
+
+<h3>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h3>
+
+<p>Peter Gebhard (<a href="https://github.com/pgebhard" class="user-mention">@pgebhard</a>) developed this software while working on the <a href="http://rtg.cis.upenn.edu/TrustForge/">TrustForge</a> project as part of <a href="http://www.darpa.mil">DARPA's</a> <a href="http://www.darpa.mil/Our_Work/TTO/Programs/Adaptive_Vehicle_Make__(AVM).aspx">Adaptive Vehicle Make</a> program. </p>
       </section>
     </div>
 
